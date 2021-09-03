@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" type="image/x-icon" href="https://scontent.fbsb8-2.fna.fbcdn.net/v/t31.18172-8/10365522_251443938392758_6853062490757288773_o.jpg?_nc_cat=109&ccb=1-5&_nc_sid=2c4854&_nc_eui2=AeFx4IWzTWIms7cbj2-CKbBT7mu6URyw7Ufua7pRHLDtRyDosw6VErGvRN3S-cNV_CwPIhZu58nzWMavg_NL_9dq&_nc_ohc=PjSgyeq4Xv4AX-LRew1&tn=1EHyLwfebk-H-InQ&_nc_ht=scontent.fbsb8-2.fna&oh=1c786e82993b58c1d8417a3a44d34077&oe=615777DB">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="description" content="borgesmito">
+    <meta property="og:site_name" content="borgesmito">
+    <meta property="og:title" content="borgesmito">
+    <meta property="og:url" content="borgesmito">
+    <meta property="og:locale" content="pt_BR">
+    <meta property="og:description" content="Company specializing in Digital Marketing and Advertising.">
+    <meta property="og:image" content="https://scontent.fbsb8-2.fna.fbcdn.net/v/t31.18172-8/10365522_251443938392758_6853062490757288773_o.jpg?_nc_cat=109&ccb=1-5&_nc_sid=2c4854&_nc_eui2=AeFx4IWzTWIms7cbj2-CKbBT7mu6URyw7Ufua7pRHLDtRyDosw6VErGvRN3S-cNV_CwPIhZu58nzWMavg_NL_9dq&_nc_ohc=PjSgyeq4Xv4AX-LRew1&tn=1EHyLwfebk-H-InQ&_nc_ht=scontent.fbsb8-2.fna&oh=1c786e82993b58c1d8417a3a44d34077&oe=615777DB">
+    <meta name="theme-color" content="#a626a6">
+    <title>Iago Borges | Indiano </title>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    
+  </head>
+  <style>
+      body {
+          box-sizing: border-box;
+          background-image: url('https://besthqwallpapers.com/Uploads/12-4-2018/48012/thumb2-happy-birthday-gifts-silk-bows-congratulations-postcard.jpg');
+          background-repeat: no-repeat;
+          background-size:cover;
+          background-clip: cover;
+          
+      }
+      .card {
+          width: 250px;
+          height: 250px;
+          margin-top: 20px;
+          transition: all 0.2s;
+          border-color: #0000ff;
+          
+      }
+      .card:hover {
+        transform: scale(0.9);
+        
+      }
+      button {
+	background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+	animation: animate 8s linear infinite;
+	z-index: 1;
+	background-size: 400%;
+	color: white;
+	font-family: 'Architects Daughter', cursive;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.alerta {
+	background: #fff;
+    z-index: 9999;
+    color: #000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px;
+    max-width: 260px;
+    width: 100%;
+    height: 110px;
+    border-radius: 3px;
+}
+
+.alertaa {
+	position: absolute;
+    z-index: 99;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0,0,0,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+  </style>
+  <body>
+    <audio src="song.mp3" autoplay loop>
+        Dont have support for audio tag
+    </audio>
+    <div class="alertaa">
+        <div class="alerta">
+            <strong><p>Deseja escutar a música?</p></strong>
+            <div class="btn-group">
+                <button type="button" data-tipo="1" >Sim</button>
+                <button type="button" data-tipo="0" >Não</button>
+            </div>
+        </div>
+    </div>
+    <button onclick="play();">Song <i class="fa fa-volume-up"></i></button>
+    
+    <script type="text/javascript">
+        const audio = document.querySelector('audio'),
+        buttons = document.querySelectorAll('.alerta button'),
+        alertaArea = document.querySelector('.alertaa')
+
+        buttons.forEach(button => {
+            button.addEventListener('click', () => {
+                let tipo = parseInt(button.getAttribute('data-tipo'))
+                if(tipo) {
+                    audio.play()
+                }
+                alertaArea.style.display = 'none'
+            })
+        })
+
+        alertaArea.addEventListener('click', (e) => {
+            if(e.target.className === 'alertaa') {
+            alertaArea.style.display = 'none'
+            }
+        })
+
+        // fuivlw
+
+        // function play(){
+            // 	if(confirm("Deseja escutar a música?")){
+                    // 		const button = document.querySelector('button')
+                    // 		button.addEventListener('click', () => {
+                            // 			audio.play()
+                    // 		});
+            // 	}
+        // }
+        // button.addEventListener('click', () => {
+            // 	audio.play()
+        // })
+        // window.onload = () => {
+            // 	if(confirm("Deseja escutar a música?")){
+                            // 		audio.play()
+                    // 		// button.addEventListener('click', () => {
+                    // 		// });
+            // 	}
+        // }
+    </script>
+
+        <div class="container">
+
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                <strong>Feliz Aniversário</strong> Indiano Iago Borges | Muitos anos de vida, Indiano. | Curta seu dia.
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+
+            <div class="row">
+                
+                <div class="col-md-4 d-flex justify-content-center">
+                    <div class="card">
+                        <img src="https://scontent.fbsb8-2.fna.fbcdn.net/v/t31.18172-8/10365522_251443938392758_6853062490757288773_o.jpg?_nc_cat=109&ccb=1-5&_nc_sid=2c4854&_nc_eui2=AeFx4IWzTWIms7cbj2-CKbBT7mu6URyw7Ufua7pRHLDtRyDosw6VErGvRN3S-cNV_CwPIhZu58nzWMavg_NL_9dq&_nc_ohc=PjSgyeq4Xv4AX-LRew1&tn=1EHyLwfebk-H-InQ&_nc_ht=scontent.fbsb8-2.fna&oh=1c786e82993b58c1d8417a3a44d34077&oe=615777DB" alt="borges petit" style="width: 100%; height:100%">
+                    </div>
+                </div>
+  
+                <div class="col-md-4 d-flex justify-content-center">
+                  <div class="card">
+                      <img src="https://scontent.fbsb8-1.fna.fbcdn.net/v/t31.18172-8/774836_232780120214260_1304084830_o.jpg?_nc_cat=105&ccb=1-5&_nc_sid=f9d7a1&_nc_eui2=AeHdAHUbuQQp9wcUGBfmL14YXwHzPi1oc99fAfM-LWhz3wr3HKUI7C9iQm6fqgJ7a_sKudsls9GDS2tM_OfkOIMm&_nc_ohc=L3qpfMY1OtsAX-WB88y&_nc_ht=scontent.fbsb8-1.fna&oh=ec30c73c6c8fefde47369162db44811a&oe=61576272" alt="borges petit" style="width: 100%; height:100%">
+                  </div>
+                </div>
+  
+                <div class="col-md-4 d-flex justify-content-center">
+                  <div class="card">
+                      <img src="https://scontent.fbsb8-2.fna.fbcdn.net/v/t1.6435-9/95912845_1269029759967499_6207004358706462720_n.jpg?_nc_cat=109&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeF34UNtQ6OrC1lUhmxtyGWGRBmlL9CFH5NEGaUv0IUfkyytZARjNPU4Hnbq-JZBlrMPNqoAIis425deyAVz6fXg&_nc_ohc=TP-39heGEZ8AX9Rf58m&tn=1EHyLwfebk-H-InQ&_nc_ht=scontent.fbsb8-2.fna&oh=88d5ef8018bcf113930989d8b631700b&oe=6155ED5F" alt="borges petit" style="width: 100%; height:100%">
+                  </div>
+                </div>
+  
+                <div class="col-md-4 d-flex justify-content-center">
+                  <div class="card">
+                      <img src="https://scontent.fbsb8-1.fna.fbcdn.net/v/t1.18169-9/1379638_290717361132082_4740589909714380390_n.jpg?_nc_cat=105&ccb=1-5&_nc_sid=174925&_nc_eui2=AeElKsl2JBcaACF2nBBvG1xtALy-frWG5ucAvL5-tYbm576PhumT8455HHGZhBFTa5MJ4Lj0MfjbogFu72gHtjxx&_nc_ohc=i4u-d5KNTCIAX-XgcFt&_nc_ht=scontent.fbsb8-1.fna&oh=1dc7c03c36d5cfe96c0d689a64699945&oe=6158FD07" alt="borges petit" style="width: 100%; height:100%">
+                  </div>
+                </div>
+  
+                <div class="col-md-4 d-flex justify-content-center">
+                  <div class="card">
+                      <img src="https://scontent.fbsb8-1.fna.fbcdn.net/v/t1.18169-9/603631_100135616856925_1350134777_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=09cbfe&_nc_eui2=AeH3d9w9BPafk_FjGHtT_S_Jfj5xRd-31bx-PnFF37fVvG5VYtVuOgriRKFu7Si8wPACNG6aS83FRArJpt7Ndund&_nc_ohc=5dOZN68GfWUAX9oeZ0_&_nc_ht=scontent.fbsb8-1.fna&oh=a46484a51e53558b4c55e40da242bfb0&oe=61590C91" alt="borges petit" style="width: 100%; height:100%">
+                  </div>
+                </div>
+  
+                <div class="col-md-4 d-flex justify-content-center">
+                  <div class="card">
+                      <img src="https://scontent.fbsb8-1.fna.fbcdn.net/v/t1.18169-9/487531_436006656603151_1780980435307530365_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=19026a&_nc_eui2=AeG65DjxFdquWvg0KZuWFQZoV5jGEk1MQGdXmMYSTUxAZ-5TNlbbxjcWLag_b6GA-_rWoLc-Trnv0r2PYuI4moMl&_nc_ohc=ziJOpozbC58AX_bymxS&tn=1EHyLwfebk-H-InQ&_nc_ht=scontent.fbsb8-1.fna&oh=62799af6951a569d0410af7734097068&oe=6155CB15" alt="borges petit" style="width: 100%; height:100%">
+                  </div>
+                </div>
+                
+            </div>
+        </div>
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>
